@@ -1,0 +1,41 @@
+.logo-slider {
+    width: 100%;
+    padding: 40px 0;
+    overflow: hidden;
+  }
+  
+  .logo-slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .logo-slider-track {
+    display: flex;
+    width: max-content;
+    transition: transform 0.6s ease;
+  }
+  
+  .logo-slider-group {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    flex-shrink: 0;
+  }
+  
+  .logo-slider-group + .logo-slider-group {
+    margin-left: 80px;
+  }
+  
+  .logo-slider-group a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .logo-slider-group img {
+    width: 130px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+  }

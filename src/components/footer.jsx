@@ -1,6 +1,6 @@
 import "./footer.css";
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
 
 import logo2 from "../images/logo2.png";
 import facebook from "../images/facebook.png";
@@ -11,7 +11,7 @@ function Footer() {
   return (
     <footer className="footer">
 
-      <div className="footer-container">
+      <div className="container footer-container">
 
         <div className="footer-top">
 
@@ -26,18 +26,33 @@ function Footer() {
             <Link to="/pricing">Pricing</Link>
             <Link to="/blog">Blog</Link>
           </nav>
-        
+
           <div className="footer-social">
 
-            <a href="#" target="_blank" aria-label="LinkedIn">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
               <img src={linkedin} alt="LinkedIn" />
             </a>
 
-            <a href="#" target="_blank" aria-label="Facebook">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
               <img src={facebook} alt="Facebook" />
             </a>
 
-            <a href="#" target="_blank" aria-label="Twitter">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
               <img src={twitter} alt="Twitter" />
             </a>
 
@@ -52,18 +67,16 @@ function Footer() {
             <h3>Contact us:</h3>
 
             <p>
-              <strong>Email: </strong>
-              info@positivus.com
+              <strong>Email:</strong> info@positivus.com
             </p>
 
             <p>
-              <strong>Phone: </strong>
-              555-567-8901
+              <strong>Phone:</strong> 555-567-8901
             </p>
 
             <p>
-              <strong>Address: </strong>
-              1234 Main St
+              <strong>Address:</strong> 1234 Main St
+              <br />
               Moonstone City, Stardust State 12345
             </p>
 
@@ -94,7 +107,6 @@ function Footer() {
           <a href="#">
             Privacy Policy
           </a>
-
         </div>
 
       </div>
