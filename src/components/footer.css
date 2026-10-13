@@ -1,5 +1,8 @@
 .footer {
-  width: 100%;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
   background-color: #191a23;
   color: #ffffff;
   padding: 55px 0 35px;

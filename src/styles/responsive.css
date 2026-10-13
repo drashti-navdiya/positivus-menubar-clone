@@ -1,0 +1,383 @@
+   body {
+    overflow-x: hidden; 
+  }
+  
+  .contact-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 1200px) {
+    .service-card {
+      padding: 36px;
+    }
+    .service-card-img {
+      width: 170px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .hero-content h1 {
+      font-size: 44px;
+    }
+  
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .service-card-img {
+      width: 210px;
+    }
+  
+    .case-study-card {
+      padding: 0 20px;
+    }
+  
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    /* section headings */
+    .section-heading,
+    .testimonials-heading {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .section-title,
+    .testimonials-heading h2 {
+      font-size: 34px;
+    }
+    .section-text,
+    .testimonials-heading p {
+      max-width: none;
+      font-size: 17px;
+    }
+  
+    .services-section,
+    .cta-section,
+    .working-process-section,
+    .contact-section {
+      padding: 56px 0;
+    }
+    .testimonials-section {
+      padding: 40px 0;
+    }
+  
+    /* hero */
+    .hero-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 32px;
+    }
+    .hero-content {
+      width: 100%;
+    }
+    .hero-content h1 {
+      font-size: 40px;
+    }
+    .hero-image {
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      margin: 0 auto;
+    }
+  
+    /* CTA */
+    .cta-box {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      padding: 40px 28px;
+      border-radius: 36px;
+    }
+    .cta-image {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      align-self: center;
+    }
+  
+    /* case studies: three columns -> one, vertical dividers -> horizontal */
+    .case-studies-panel {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding: 32px 28px;
+      border-radius: 30px;
+    }
+    .case-study-card,
+    .case-study-card:first-child,
+    .case-study-card:last-child {
+      padding: 0;
+    }
+    .case-study-card:not(:last-child) {
+      padding-bottom: 28px;
+      border-right: none;
+      border-bottom: 1px solid #f3f3f3;
+    }
+    .case-study-card p {
+      max-width: none;
+    }
+  
+    /* testimonials: let the box grow with its content */
+    .testimonials-slider {
+      height: auto;
+      padding: 32px 0 28px;
+    }
+    .testimonial-controls {
+      width: 100%;
+      max-width: 520px;
+      padding: 0 24px;
+    }
+  
+    /* contact */
+    .contact-box {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 32px;
+      min-height: 0;
+      padding: 40px 28px;
+      border-radius: 36px;
+    }
+    .contact-form {
+      width: 100%;
+      max-width: none;
+    }
+    .contact-image {
+      width: 100%;
+      min-height: 0;
+    }
+    .contact-image img {
+      width: 360px;
+    }
+  
+    /* footer */
+    .footer {
+      padding: 44px 0 28px;
+      border-radius: 32px;
+    }
+    .footer-top {
+      flex-direction: column;
+      gap: 28px;
+    }
+    .footer-nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 24px;
+    }
+    .footer-middle {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 32px;
+      padding: 36px 0;
+    }
+    .footer-contact {
+      width: 100%;
+    }
+    .footer-newsletter {
+      padding: 28px;
+    }
+    .footer-newsletter input {
+      flex: 1 1 auto;
+      width: auto;
+      min-width: 0;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-contact h3,
+    .footer-contact p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+  }
+  
+  
+  @media (max-width: 600px) {
+    .btn {
+      padding: 14px 22px;
+      font-size: 17px;
+      border-radius: 12px;
+    }
+    .hero-content .btn {
+      width: 100%;
+    }
+  
+    .hero-content h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    .section-title,
+    .testimonials-heading h2 {
+      font-size: 28px;
+    }
+    .section-text,
+    .testimonials-heading p,
+    .cta-content p,
+    .process-content p {
+      font-size: 16px;
+    }
+    .cta-content h2 {
+      font-size: 26px;
+    }
+  
+    .logo-slider {
+      padding: 24px 0;
+    }
+  
+    .services-section,
+    .cta-section,
+    .working-process-section,
+    .contact-section {
+      padding: 44px 0;
+    }
+  
+    /* services: stack text above image */
+    .services-grid {
+      gap: 24px;
+    }
+    .service-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      min-height: 0;
+      padding: 28px 24px;
+      border-radius: 32px;
+    }
+    .service-card-content {
+      height: auto;
+      gap: 24px;
+    }
+    .service-card h3 {
+      font-size: 24px;
+    }
+    .service-card a {
+      font-size: 18px;
+    }
+    .service-card-img {
+      width: 100%;
+      max-width: 220px;
+      align-self: center;
+    }
+  
+    /* working process accordion */
+    .process-list {
+      gap: 18px;
+    }
+    .process-card {
+      padding: 22px 20px;
+      border-radius: 28px;
+    }
+    .process-header {
+      gap: 12px;
+    }
+    .process-title {
+      gap: 14px;
+      min-width: 0;
+    }
+    .process-number {
+      font-size: 36px;
+    }
+    .process-title h3 {
+      font-size: 18px;
+    }
+    .process-toggle {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      font-size: 26px;
+    }
+    .process-content {
+      margin-top: 20px;
+      padding-top: 18px;
+    }
+  
+    /* team */
+    .team-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .team-card {
+      min-height: 0;
+      padding: 22px;
+      border-radius: 28px;
+    }
+  
+    /* testimonials: card narrower than the box so neighbours peek in */
+    .testimonials-slider {
+      border-radius: 28px;
+    }
+    .testimonials-track {
+      gap: 16px;
+    }
+    .testimonial-card {
+      width: min(476px, 80vw);
+      flex: 0 0 min(476px, 80vw);
+    }
+    .testimonial-message {
+      padding: 20px;
+      border-radius: 24px;
+    }
+    .testimonial-message p {
+      font-size: 15px;
+    }
+    .testimonial-person {
+      margin-top: 28px;
+      margin-left: 20px;
+    }
+  
+    .case-studies-panel {
+      padding: 28px 22px;
+      border-radius: 28px;
+    }
+  
+    .cta-box,
+    .contact-box {
+      padding: 32px 22px;
+      border-radius: 30px;
+    }
+    .contact-options {
+      flex-wrap: wrap;
+      gap: 12px 24px;
+    }
+    .contact-image img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .footer-nav {
+      gap: 10px 20px;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 28px;
+    }
+    .footer-newsletter {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 22px;
+    }
+    .footer-newsletter input {
+      flex: none;
+      width: 100%;
+    }
+    .footer-newsletter button {
+      width: 100%;
+    }
+    .footer-nav{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+  }

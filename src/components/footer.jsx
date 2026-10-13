@@ -11,7 +11,7 @@ function Footer() {
   return (
     <footer className="footer">
 
-      <div className="container footer-container">
+      <div className="container">
 
         <div className="footer-top">
 
@@ -75,9 +75,7 @@ function Footer() {
             </p>
 
             <p>
-              <strong>Address:</strong> 1234 Main St
-              <br />
-              Moonstone City, Stardust State 12345
+              <strong>Address:</strong> 1234 Main St Moonstone City, Stardust State 12345
             </p>
 
           </div>

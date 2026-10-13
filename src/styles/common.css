@@ -6,12 +6,9 @@
 
 .container {
   width: 90%;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
-  /* padding: 0 20px; */
 }
-
-/* Common button */
 
 .btn {
   display: inline-block;
@@ -23,6 +20,7 @@
   font-family: inherit;
   font-size: 20px;
   cursor: pointer;
+
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
@@ -35,19 +33,28 @@
   transform: translateY(-2px);
 }
 
-/* Common section title */
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
 
 .section-title {
   font-size: 40px;
   font-weight: 500;
-  color: #191a23;
   line-height: 1.2;
+  color: #191a23;
+  text-align: left;
+  background-color: #b9ff66;
+  padding: 0 7px;
+  border-radius: 7px;
 }
 
-/* Common section text */
-
 .section-text {
+  max-width: 580px;
   font-size: 18px;
   line-height: 1.5;
-  color: #717171;
+  color: #191a23;
+  text-align: left;
 }

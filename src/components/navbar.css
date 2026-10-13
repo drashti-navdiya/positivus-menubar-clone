@@ -1,5 +1,6 @@
-
 .navbar {
+  position: relative;
+  z-index: 100;
   width: 100%;
   padding: 25px 0;
   background-color: #ffffff;
@@ -40,7 +41,7 @@
 
 .nav-menu a {
   line-height: 28px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   color: #000000;
   text-decoration: none;
@@ -67,4 +68,144 @@
 
 .nav-menu .quote-button:hover {
   background-color: #b9ff66;
+}
+
+/* ---------- Hamburger button (hidden on desktop) ---------- */
+
+.nav-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  border: 1px solid #191a23;
+  border-radius: 14px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-toggle:hover,
+.nav-toggle.open {
+  background-color: #b9ff66;
+}
+
+.nav-toggle:focus-visible {
+  outline: 3px solid #191a23;
+  outline-offset: 3px;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #191a23;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+/* bars morph into an X (2px bar + 5px gap = 7px travel) */
+.nav-toggle.open .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- Small laptops: tighten so the full menu still fits ---------- */
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .nav-menu {
+    gap: 22px;
+  }
+  .nav-menu a {
+    font-size: 18px;
+  }
+  .quote-button {
+    padding: 14px 22px;
+  }
+}
+
+/* ---------- Tablet & mobile: hamburger + dropdown panel ---------- */
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 16px 0;
+  }
+
+  .navbar-container {
+    padding: 0; /* line the logo up with the page sections */
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 12px 5% 28px;
+    max-height: calc(100vh - 72px);
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #191a23;
+    box-shadow: 0 16px 24px rgba(25, 26, 35, 0.08);
+
+    /* visibility keeps closed links out of the tab order */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0s linear 0.25s;
+  }
+
+  .nav-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition-delay: 0s;
+  }
+
+  .nav-menu a:not(.quote-button) {
+    padding: 14px 12px;
+  }
+
+  .quote-button {
+    margin-top: 10px;
+    padding: 16px 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 130px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-menu,
+  .nav-toggle-bar {
+    transition: none;
+  }
 }

@@ -1,0 +1,161 @@
+.testimonials-section {
+  padding: 60px 0;
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.testimonials-heading {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.testimonials-heading h2 {
+  margin: 0;
+  padding: 0 8px;
+  background-color: #b9ff66;
+  border-radius: 7px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.testimonials-heading p {
+  max-width: 600px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.testimonials-slider {
+  width: 100%;
+  height: 345px;
+  background-color: #191a23;
+  border-radius: 35px;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+
+.testimonials-window {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.testimonials-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  width: max-content;
+  position: relative;   /* required: offsetLeft is measured from the track */
+  will-change: transform;
+}
+
+.testimonial-card {
+  width: 476px;
+  flex: 0 0 476px;
+  /* opacity: 0.5; */
+  transition: opacity 0.6s ease;
+}
+
+
+.testimonial-message {
+  position: relative;
+  min-height: 125px;
+  padding: 25px;
+  border: 1px solid #b9ff66;
+  border-radius: 30px;
+  color: #ffffff;
+  background-color: #191a23;
+}
+
+.testimonial-message::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 62px;
+  width: 20px;
+  height: 20px;
+  background-color: #191a23;
+  border-right: 1px solid #b9ff66;
+  border-bottom: 1px solid #b9ff66;
+  transform: rotate(45deg);
+}
+
+.testimonial-message p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.testimonial-person {
+  margin-top: 32px;
+  margin-left: 32px;
+}
+
+.testimonial-person h4 {
+  margin: 0;
+  color: #b9ff66;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.testimonial-person span {
+  display: block;
+  margin-top: 4px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 520px;
+  margin: 30px auto 0;
+}
+
+.testimonial-arrow {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  transition: 0.2s ease;
+}
+
+.testimonial-arrow:hover {
+  color: #b9ff66;
+}
+
+.testimonial-stars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.star {
+  border: none;
+  background: transparent;
+  color: #777777;
+  font-size: 24px;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.star.active {
+  color: #b9ff66;
+}
+
+.star:hover {
+  color: #b9ff66;
+}

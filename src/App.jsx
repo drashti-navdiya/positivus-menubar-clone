@@ -4,6 +4,14 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Hero from "./sections/hero";
 import LogoSlider from "./sections/logoSlider";
+import Service from "./sections/service";
+import CTA from "./sections/cta";
+import WorkingProcess from "./sections/accordian";
+import Team from "./sections/team";
+import CaseStudies from "./sections/caseStudies";
+import Testimonials from "./sections/testimonials";
+import ContactUs from "./sections/contactUs";
+
 
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -32,6 +40,13 @@ function App() {
       <main>
           <Hero />
           <LogoSlider />
+          <Service />
+          <CTA />
+          <CaseStudies />
+          <WorkingProcess />
+          <Team />
+          <Testimonials />
+          <ContactUs />
       </main>
 
       <Footer />
